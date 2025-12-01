@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+ <html lang="pt-BR">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+    body {
+        background: linear-gradient(135deg, #0f1f0f, #1b3a1b, #2e4d2e);
+        color: #e8f5e9;
+        overflow-x: hidden;
+        animation: fadeIn 1.2s ease;
+    }
+    
+    .calculadora {
+      background-color: #68cc56;
+      border: 2px solid #c8e6c9;
+      border-radius: 15px;
+      padding: 25px;
+      margin-top: 20px;
+    }
+
+    .calculadora label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    .calculadora input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+    }
+    </style>
+ </head>
+ <body>
+    <section id="calculadora">
+    <div class="card">
+      <h2>Calculadora de Economia Alimentar</h2>
+      <p>Descubra quanto você economiza ao reduzir o desperdício!</p>
+      <div class="calculadora">
+        <label>Quantidade média de comida desperdiçada por semana (kg):</label>
+        <input type="number" id="kg" value="2">
+
+        <label>Preço médio do kg de comida (R$):</label>
+        <input type="number" id="preco" value="15" step="0.01">
+
+        <button class="botao-calc" onclick="calcular()">Calcular Economia</button>
+
+        <div class="resultado" id="resultado"></div>
+      </div>
+    </div>
+    </section>
+ </body>
+ </html>
+      

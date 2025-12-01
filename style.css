@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(135deg, #0b0f0d, #111412, #1a201d);
+    color: #e9e9e9;
+    padding: 40px;
+    animation: fadeIn 1.2s ease;
+} */
+
+/* ---- Cabeçalhos ---- */
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1, h2 {
+    font-size: 40px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00e676, #39ff8f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    color: #cccccc;
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* ---- CARDS DA HOMEPAGE ---- */
+
+.menu {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+    margin-top: 15px;
+    padding: 40px;
+
+}
+
+.card {
+    padding: 32px;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    transition: 0.35s ease;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -80%;
+    left: -50%;
+    width: 250%;
+    height: 250%;
+    background: radial-gradient(circle, rgba(0,230,118,0.15), transparent 60%);
+    transform: rotate(25deg);
+    transition: 0.8s;
+}
+
+.card:hover::before {
+    top: -20%;
+    left: -20%;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #00e676;
+    box-shadow: 0px 0px 25px #00ff6e33;
+}
+
+/* ---- Conteúdo interno das páginas ---- */
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    animation: slideUp .7s ease;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    border-radius: 12px;
+    font-size: 17px;
+    outline: none;
+    transition: .3s;
+}
+
+input:focus {
+    border-color: #00e676;
+    box-shadow: 0px 0px 10px #00e67644;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px;
+    background: linear-gradient(90deg, #00e676, #39ff8f);
+    border: none;
+    border-radius: 14px;
+    color: #000;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 18px;
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 18px #00e67666;
+}
+
+/* ---- Resultado ---- */
+
+.resultado {
+    margin-top: 25px;
+    padding: 25px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+    animation: fadeIn .7s ease;
+}
+
+/* ---- Dicas ---- */
+
+.lista-dicas li {
+    margin: 18px 0;
+    padding: 18px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: .35s;
+}
+
+.lista-dicas li:hover {
+    transform: translateX(8px);
+    border-color: #00e676;
+    box-shadow: 0px 0px 15px #00e67633;
+}
+
+/* ---- Animações ---- */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== ESTILO GERAL ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f1f0f, #1b3a1b, #2e4d2e);
+  color: #e8f5e9;
+  overflow-x: hidden;
+  animation: fadeIn 1.2s ease;
+}
+
+/* ======== NAVBAR ======== */
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: rgba(10, 20, 10, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #8bc34a;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar a {
+  color: #c8e6c9;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #8bc34a;
+  transform: scale(1.07);
+}
+
+/* ======== BALÕES ======== */
+.ballon {
+    display: flex;
+}
+.balloon {
+  max-width: 620px;
+  margin: 25px;
+  background: rgba(40, 70, 40, 0.75);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  animation: fadeInUp 1s ease;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(120, 180, 120, 0.2);
+  
+}
+
+.balloon h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #a5d6a7;
+}
+
+.balloon p, .balloon ul {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e8f5e9;
+}
+
+.balloon ul li {
+  margin-bottom: 10px;
+}
+
+/* ======== ANIMAÇÕES ======== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======== SCROLLBAR PERSONALIZADA ======== */
+/* ::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1d331d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #66bb6a;
+} */
+
+
