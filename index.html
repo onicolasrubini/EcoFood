@@ -4,192 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoFood - Combatendo o Desperdício</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* -------------------------------------- */
-        /* 1. VARIÁVEIS DE CORES E RESET BÁSICO */
-        /* -------------------------------------- */
-        :root {
-            /* Paleta sugerida */
-            --cor-principal-verde: #4CAF50; /* Saúde, Frescor, CTA principal */
-            --cor-acento-amarelo: #FFC107; /* Chamada de Atenção (Botões) */
-            --cor-texto-escuro: #424242; /* Texto principal */
-            --cor-fundo-claro: #F5F5F5; /* Fundo sutil para cards */
-            --cor-fundo-branco: #FFFFFF;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: var(--cor-texto-escuro);
-            background-color: var(--cor-fundo-branco);
-            line-height: 1.6;
-        }
-
-        /* -------------------------------------- */
-        /* 2. HEADER E NAVEGAÇÃO */
-        /* -------------------------------------- */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 80px;
-            background-color: var(--cor-fundo-branco);
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        .logo {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 24px;
-            color: var(--cor-principal-verde);
-            display: flex;
-            align-items: center;
-        }
-
-        .logo-icon {
-            font-size: 20px;
-            margin-right: 5px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--cor-texto-escuro);
-            margin-left: 25px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--cor-principal-verde);
-        }
-
-        /* -------------------------------------- */
-        /* 3. SEÇÃO PRINCIPAL (HERO) */
-        /* -------------------------------------- */
-        .hero {
-            text-align: center;
-            padding: 80px 40px 60px;
-        }
-
-        .hero h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--cor-texto-escuro);
-            margin-bottom: 20px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 40px;
-            color: #616161; /* Cinza um pouco mais claro */
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .cta-button {
-            background-color: var(--cor-acento-amarelo);
-            color: var(--cor-texto-escuro);
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            padding: 15px 35px;
-            border: none;
-            border-radius: 12px;
-            font-size: 18px;
-            cursor: pointer;
-            box-shadow: 0 8px 15px rgba(255, 193, 7, 0.3); /* Sombra para destaque */
-            transition: transform 0.2s, box-shadow 0.2s;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(255, 193, 7, 0.4);
-        }
-
-        /* -------------------------------------- */
-        /* 4. CARDS DE CONTEÚDO */
-        /* -------------------------------------- */
-        .content-cards {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            padding: 0 80px 80px;
-        }
-
-        .card {
-            background-color: var(--cor-fundo-branco);
-            border: 1px solid #E0E0E0;
-            border-radius: 15px;
-            padding: 30px;
-            width: 100%;
-            max-width: 450px;
-            text-align: left;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        }
-        
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .card h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 22px;
-            font-weight: 600;
-            color: var(--cor-principal-verde);
-        }
-
-        .card-icon-container {
-            font-size: 24px;
-            color: var(--cor-principal-verde);
-            /* Usando um fundo sutil para o ícone */
-            background-color: rgba(76, 175, 80, 0.1); 
-            border-radius: 50%;
-            padding: 8px;
-            display: flex;
-        }
-        
-        .card p, .card ul {
-            font-size: 16px;
-            color: #616161;
-            margin-top: 10px;
-        }
-
-        .card ul {
-            padding-left: 20px;
-        }
-
-        .card ul li {
-            margin-bottom: 5px;
-        }
-
-    </style>
 </head>
 <body>
 
     <header class="header">
         <div class="logo">
-            <span class="logo-icon">🍎</span>EcoFood
+            <span class="logo-icon">🍃</span>EcoFoodi
         </div>
         <nav class="nav-links">
             <a href="./calculadora.html">Calculadora</a>
@@ -204,11 +26,11 @@
             <p>Seu guia para economizar, cozinhar com inteligência e preservar o planeta</p>
             
             <div class="cta-buttons">
-                <a href="#" class="cta-button">
-                    <span style="font-size: 20px;">🍴</span> Receitas Inteligentes
+                <a href="./receitas.html" class="cta-button">
+                    <span style="font-size: 20px;"></span> Receitas Inteligentes
                 </a>
-                <a href="#" class="cta-button">
-                    <span style="font-size: 20px;">♻️</span> Dicas Anti-Desperdício
+                <a href="./dicas.html" class="cta-button">
+                    <span style="font-size: 20px;"></span> Dicas Anti-Desperdício
                 </a>
             </div>
 
@@ -227,9 +49,9 @@
                         <div class="card-icon-container">📦</div>
                     </div>
                     <ul>
-                        <li>**Não misture** frutas com vegetais que liberam etileno (como banana e maçã), pois aceleram o amadurecimento.</li>
-                        <li>**Evite deixar** alimentos expostos e use potes herméticos ou *film* plástico para manter o frescor.</li>
-                        <li>**Mantenha** as ervas frescas em um copo com água na geladeira, como se fossem flores.</li>
+                        <li>Não misture frutas com vegetais que liberam etileno (como banana e maçã), pois aceleram o amadurecimento.</li>
+                        <li>Evite deixar alimentos expostos e use potes herméticos ou *film* plástico para manter o frescor.</li>
+                        <li>Mantenha as ervas frescas em um copo com água na geladeira, como se fossem flores.</li>
                     </ul>
                 </div>
             </div>
