@@ -54,6 +54,12 @@
           transition: color 0.3s;
       }
 
+      .logo a {
+        text-decoration: none;
+        color: var(--cor-principal-verde);
+        transition: color 0.3s;
+      }
+
       .nav-links a:hover {
           color: var(--cor-principal-verde);
       }
@@ -166,3 +172,121 @@
       .card ul li {
           margin-bottom: 5px;
       }
+
+      .nav-links a.active {
+        font-weight: 700;
+        color: var(--cor-principal-verde);
+    }
+
+    /* -------------------------------------- */
+    /* 3. LAYOUT DA CALCULADORA */
+    /* -------------------------------------- */
+    .calculator-container {
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .calculator-header h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        color: var(--cor-principal-verde);
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .calculator-header p {
+        font-size: 18px;
+        color: #616161;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .calculator-card {
+        background-color: var(--cor-fundo-branco);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px; /* Largura ideal para um formulário */
+        border-top: 5px solid var(--cor-acento-amarelo); /* Linha de destaque */
+    }
+
+    /* 4. ESTILIZAÇÃO DO FORMULÁRIO */
+
+    .input-group {
+        margin-bottom: 25px;
+    }
+
+    .input-group label {
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 16px;
+        color: var(--cor-texto-escuro);
+    }
+
+    .input-group input[type="text"], 
+    .input-group input[type="number"] {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #E0E0E0;
+        border-radius: 10px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+    }
+
+    .input-group input[type="text"]:focus, 
+    .input-group input[type="number"]:focus {
+        border-color: var(--cor-principal-verde);
+        outline: none;
+    }
+
+    .calculate-button {
+        width: 100%;
+        background-color: var(--cor-acento-amarelo);
+        color: var(--cor-texto-escuro);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        padding: 15px;
+        border: none;
+        border-radius: 12px;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0 8px 15px rgba(255, 193, 7, 0.3);
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .calculate-button:hover {
+        background-color: #FFB300; /* Um amarelo um pouco mais escuro */
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(255, 193, 7, 0.4);
+    }
+    
+    /* 5. SEÇÃO DE RESULTADO */
+    .result-box {
+        background-color: var(--cor-principal-verde);
+        color: var(--cor-fundo-branco);
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        margin-top: 30px;
+        display: none; /* Inicie oculto, o JS vai mostrar após o cálculo */
+    }
+    
+    .result-box h3 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    
+    .result-box .value {
+        font-size: 40px;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 10px;
+    }
