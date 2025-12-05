@@ -5,83 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Receitas Inteligentes - EcoFood</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <header>
-    <div class="container">
-      <h1>
-        <span>🍃</span>
-        <span><a href="./index.html">EcoFood</a></span>
-      </h1>
-
-      <nav>
-        <a href="calculadora.html">Calculadora</a>
-        <a href="dicas.html">Dicas</a>
-        <a href="receitas.html" class="active">Receitas</a>
-      </nav>
+  <header class="header">
+    <div class="logo">
+        <span class="logo-icon">🍃</span><a href="./index.html">EcoFood</a>
     </div>
+      <nav class="nav-links">
+        <a href="./calculadora.html">Calculadora</a> 
+        <a href="./dicas.html">Dicas</a>
+        <a href="./receitas.html"  class="active">Receitas</a>
+      </nav>
   </header>
 
-  <!-- TÍTULO -->
-  <section class="title">
+  <section class="title-receitas">
     <h2>Receitas Inteligentes Anti-Desperdício</h2>
-
-    <p>
-      Use sobras para criar pratos deliciosos, nutritivos e sustentáveis.
-    </p>
+    <p>Use sobras para criar pratos deliciosos, nutritivos e sustentáveis.</p>
   </section>
 
-  <!-- GRID DE RECEITAS -->
   <main class="grid">
 
-    <!-- CARD 1 -->
-    <div class="card">
+    <!-- CARDs-->
+    <div class="card-receitas">
       <img src="./images/pudim-de-pao.jpg" />
-
       <h3>Pudim de Pão Crocante</h3>
-
       <p>Reaproveite aquele pão amanhecido e crie uma sobremesa deliciosa.</p>
-
       <span class="tag">Aproveitamento de Pães</span>
     </div>
 
-    <!-- CARD 2 -->
-    <div class="card">
+    <div class="card-receitas">
       <img src="./images/farofaComTalos.webp" />
-
       <h3>Farofa Rica em Talos</h3>
-
       <p>Talos de vegetais ganham nova vida nesta farofa nutritiva e saborosa.</p>
-
       <span class="tag">Vegetais / Cascas</span>
     </div>
 
-    <!-- CARD 3 -->
-    <div class="card">
+    <div class="card-receitas">
       <img src="./images/bolinho-de-arroz.jpg" />
-
       <h3>Bolinho de Arroz Recheado</h3>
-
       <p>Transforme o arroz que sobrou em um lanche crocante e irresistível.</p>
-
       <span class="tag">Aproveitamento de Sobras</span>
     </div>
 
-    <!-- CARD 4 -->
-    <div class="card">
+    <div class="card-receitas">
       <img src="./images/torta-de-talos.webp" />
-
       <h3>'Carne' de Casca de Banana</h3>
-
       <p>Uma alternativa vegana e sustentável, rica em fibras e sabor.</p>
-
       <span class="tag">Aproveitamento de Frutas</span>
     </div>
 
   </main>
-
 </body>
 </html>
