@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
-        /* 1. VARIÁVEIS DE CORES E RESET BÁSICO */
+        /* VARIÁVEIS DE CORES E RESET BÁSICO */
         :root {
           --cor-principal-verde: #4CAF50; /* Saúde, Frescor, CTA principal */
           --cor-acento-amarelo: #FFC107; /* Chamada de Atenção (Botões) */
@@ -22,7 +22,7 @@
           line-height: 1.6;
       }
 
-      /* 2. HEADER E NAVEGAÇÃO */
+      /* HEADER E NAVEGAÇÃO */
       .header {
           display: flex;
           justify-content: space-between;
@@ -64,7 +64,7 @@
           color: var(--cor-principal-verde);
       }
 
-      /* 3. SEÇÃO PRINCIPAL (HERO) */
+      /* SEÇÃO PRINCIPAL (HERO) */
       .hero {
           text-align: center;
           padding: 80px 40px 60px;
@@ -117,7 +117,7 @@
           box-shadow: 0 10px 20px rgba(255, 193, 7, 0.4);
       }
 
-      /* 4. CARDS DE CONTEÚDO */
+      /* CARDS DE CONTEÚDO */
       .content-cards {
           display: flex;
           justify-content: center;
@@ -178,9 +178,7 @@
         color: var(--cor-principal-verde);
     }
 
-    /* -------------------------------------- */
-    /* 3. LAYOUT DA CALCULADORA */
-    /* -------------------------------------- */
+    /* LAYOUT DA CALCULADORA */
     .calculator-container {
         padding: 50px 20px;
         display: flex;
@@ -211,12 +209,11 @@
         border-radius: 20px;
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         width: 100%;
-        max-width: 600px; /* Largura ideal para um formulário */
-        border-top: 5px solid var(--cor-acento-amarelo); /* Linha de destaque */
+        max-width: 600px; 
+        border-top: 5px solid var(--cor-acento-amarelo); 
     }
 
-    /* 4. ESTILIZAÇÃO DO FORMULÁRIO */
-
+    /* ESTILIZAÇÃO DO FORMULÁRIO */
     .input-group {
         margin-bottom: 25px;
     }
@@ -262,12 +259,12 @@
     }
 
     .calculate-button:hover {
-        background-color: #FFB300; /* Um amarelo um pouco mais escuro */
+        background-color: #FFB300; 
         transform: translateY(-2px);
         box-shadow: 0 10px 20px rgba(255, 193, 7, 0.4);
     }
     
-    /* 5. SEÇÃO DE RESULTADO */
+    /* SEÇÃO DE RESULTADO */
     .result-box {
         background-color: var(--cor-principal-verde);
         color: var(--cor-fundo-branco);
@@ -275,7 +272,7 @@
         border-radius: 15px;
         text-align: center;
         margin-top: 30px;
-        display: none; /* Inicie oculto, o JS vai mostrar após o cálculo */
+        display: none; 
     }
     
     .result-box h3 {
@@ -291,89 +288,29 @@
         margin-top: 10px;
     }
 
-    /* ====== RESET ====== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
   
-  body {
-    background: #ffffff;
-    color: #4b5563; /* gray-700 */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  }
+  /* RECEITAS */
   
-  /* ====== NAVBAR ====== */
-  
-  header {
-    width: 100%;
-    padding: 1rem 0;
-    background: #fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  }
-  
-  header .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  header h1 a {
-    color: #16a34a; /* green-600 */
-    text-decoration: none;
-  }
-  
-  nav a {
-    color: #64748b; /* gray-600 */
-    margin-left: 2rem;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color .2s ease;
-  }
-  
-  nav a:hover {
-    color: #16a34a;
-  }
-  
-  nav a.active {
-    color: #16a34a;
-    font-weight: 600;
-  }
-  
-  /* ====== TÍTULO ====== */
-  
-  section.title {
+  section.title-receitas {
     text-align: center;
     margin-top: 4rem;
     padding: 0 1rem;
   }
   
-  section.title h2 {
+  section.title-receitas h2 {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #1f2937; /* gray-800 */
+    color: #1f2937;
   }
   
-  section.title p {
+  section.title-receitas p {
     color: #4b5563;
     margin-top: 1rem;
     font-size: 1.125rem;
     margin-bottom: 3rem;
   }
   
-  /* ====== GRID ====== */
+  /* GRID */
   
   main.grid {
     max-width: 1100px;
@@ -396,9 +333,9 @@
     }
   }
   
-  /* ====== CARDS ====== */
+  /* CARDS */
   
-  .card {
+  .card-receitas {
     background: #fff;
     border: 1px solid #e5e7eb; /* gray-200 */
     border-radius: 1rem;
@@ -407,36 +344,36 @@
     transition: box-shadow .2s ease;
   }
   
-  .card:hover {
+  .card-receitas:hover {
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   }
   
-  .card img {
+  .card-receitas img {
     width: 100%;
     height: 10rem;
     object-fit: cover;
     border-radius: 0.75rem;
   }
   
-  .card h3 {
+  .card-receitas h3 {
     margin-top: 1rem;
     font-size: 1.25rem;
     font-weight: 600;
     color: #1f2937;
   }
   
-  .card p {
+  .card-receitas p {
     margin-top: 0.5rem;
     color: #4b5563;
   }
   
-  .card .tag {
+  .card-receitas .tag {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.25rem 1rem;
     font-size: 0.875rem;
-    background: #dcfce7; /* green-100 */
-    color: #15803d; /* green-700 */
+    background: #dcfce7; 
+    color: #15803d; 
     font-weight: 500;
     border-radius: 999px;
   }
