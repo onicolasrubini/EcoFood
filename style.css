@@ -1,293 +1,292 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        /* 1. VARIÁVEIS DE CORES E RESET BÁSICO */
+        :root {
+          --cor-principal-verde: #4CAF50; /* Saúde, Frescor, CTA principal */
+          --cor-acento-amarelo: #FFC107; /* Chamada de Atenção (Botões) */
+          --cor-texto-escuro: #424242; /* Texto principal */
+          --cor-fundo-claro: #F5F5F5; /* Fundo sutil para cards */
+          --cor-fundo-branco: #FFFFFF;
+      }
 
-/* body {
-    font-family: "Inter", sans-serif;
-    background: linear-gradient(135deg, #0b0f0d, #111412, #1a201d);
-    color: #e9e9e9;
-    padding: 40px;
-    animation: fadeIn 1.2s ease;
-} */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
 
-/* ---- Cabeçalhos ---- */
+      body {
+          font-family: 'Roboto', sans-serif;
+          color: var(--cor-texto-escuro);
+          background-color: var(--cor-fundo-branco);
+          line-height: 1.6;
+      }
 
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
+      /* 2. HEADER E NAVEGAÇÃO */
+      .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 80px;
+          background-color: var(--cor-fundo-branco);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+      }
 
-h1, h2 {
-    font-size: 40px;
-    font-weight: 800;
-    background: linear-gradient(90deg, #00e676, #39ff8f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+      .logo {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 700;
+          font-size: 24px;
+          color: var(--cor-principal-verde);
+          display: flex;
+          align-items: center;
+      }
 
-p {
-    color: #cccccc;
-    font-size: 18px;
-    margin-top: 10px;
-    opacity: 0.8;
-}
+      .logo-icon {
+          font-size: 20px;
+          margin-right: 5px;
+      }
 
-/* ---- CARDS DA HOMEPAGE ---- */
+      .nav-links a {
+          text-decoration: none;
+          color: var(--cor-texto-escuro);
+          margin-left: 25px;
+          font-weight: 500;
+          transition: color 0.3s;
+      }
 
-.menu {
-    margin: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 35px;
-    margin-top: 15px;
-    padding: 40px;
+      .logo a {
+        text-decoration: none;
+        color: var(--cor-principal-verde);
+        transition: color 0.3s;
+      }
 
-}
+      .nav-links a:hover {
+          color: var(--cor-principal-verde);
+      }
 
-.card {
-    padding: 32px;
-    border-radius: 18px;
-    text-decoration: none;
-    color: #ffffff;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(12px);
-    transition: 0.35s ease;
-    font-size: 22px;
-    font-weight: 600;
-    position: relative;
-    overflow: hidden;
-}
+      /* 3. SEÇÃO PRINCIPAL (HERO) */
+      .hero {
+          text-align: center;
+          padding: 80px 40px 60px;
+      }
 
-.card::before {
-    content: "";
-    position: absolute;
-    top: -80%;
-    left: -50%;
-    width: 250%;
-    height: 250%;
-    background: radial-gradient(circle, rgba(0,230,118,0.15), transparent 60%);
-    transform: rotate(25deg);
-    transition: 0.8s;
-}
+      .hero h1 {
+          font-family: 'Poppins', sans-serif;
+          font-size: 48px;
+          font-weight: 700;
+          color: var(--cor-texto-escuro);
+          margin-bottom: 20px;
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+      }
 
-.card:hover::before {
-    top: -20%;
-    left: -20%;
-}
+      .hero p {
+          font-size: 18px;
+          margin-bottom: 40px;
+          color: #616161; 
+      }
 
-.card:hover {
-    transform: translateY(-8px);
-    border-color: #00e676;
-    box-shadow: 0px 0px 25px #00ff6e33;
-}
+      .cta-buttons {
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+          margin-bottom: 60px;
+      }
 
-/* ---- Conteúdo interno das páginas ---- */
+      .cta-button {
+          background-color: var(--cor-acento-amarelo);
+          color: var(--cor-texto-escuro);
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+          padding: 15px 35px;
+          border: none;
+          border-radius: 12px;
+          font-size: 18px;
+          cursor: pointer;
+          box-shadow: 0 8px 15px rgba(255, 193, 7, 0.3); 
+          transition: transform 0.2s, box-shadow 0.2s;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+      }
 
-.container {
-    max-width: 700px;
-    margin: auto;
-    padding: 20px;
-    animation: slideUp .7s ease;
-}
+      .cta-button:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px rgba(255, 193, 7, 0.4);
+      }
 
-input {
-    width: 100%;
-    padding: 15px;
-    margin-top: 25px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: white;
-    border-radius: 12px;
-    font-size: 17px;
-    outline: none;
-    transition: .3s;
-}
+      /* 4. CARDS DE CONTEÚDO */
+      .content-cards {
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          padding: 0 80px 80px;
+      }
 
-input:focus {
-    border-color: #00e676;
-    box-shadow: 0px 0px 10px #00e67644;
-}
+      .card {
+          background-color: var(--cor-fundo-branco);
+          border: 1px solid #E0E0E0;
+          border-radius: 15px;
+          padding: 30px;
+          width: 100%;
+          max-width: 450px;
+          text-align: left;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+      
+      .card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 15px;
+      }
 
-button {
-    width: 100%;
-    margin-top: 20px;
-    padding: 16px;
-    background: linear-gradient(90deg, #00e676, #39ff8f);
-    border: none;
-    border-radius: 14px;
-    color: #000;
-    font-weight: 800;
-    cursor: pointer;
-    font-size: 18px;
-    transition: .3s;
-}
+      .card h2 {
+          font-family: 'Poppins', sans-serif;
+          font-size: 22px;
+          font-weight: 600;
+          color: var(--cor-principal-verde);
+      }
 
-button:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 0px 18px #00e67666;
-}
+      .card-icon-container {
+          font-size: 24px;
+          color: var(--cor-principal-verde);
+          background-color: rgba(76, 175, 80, 0.1); 
+          border-radius: 50%;
+          padding: 8px;
+          display: flex;
+      }
+      
+      .card p, .card ul {
+          font-size: 16px;
+          color: #616161;
+          margin-top: 10px;
+      }
 
-/* ---- Resultado ---- */
+      .card ul {
+          padding-left: 20px;
+      }
 
-.resultado {
-    margin-top: 25px;
-    padding: 25px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.06);
-    animation: fadeIn .7s ease;
-}
+      .card ul li {
+          margin-bottom: 5px;
+      }
 
-/* ---- Dicas ---- */
+      .nav-links a.active {
+        font-weight: 700;
+        color: var(--cor-principal-verde);
+    }
 
-.lista-dicas li {
-    margin: 18px 0;
-    padding: 18px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.06);
-    transition: .35s;
-}
+    /* -------------------------------------- */
+    /* 3. LAYOUT DA CALCULADORA */
+    /* -------------------------------------- */
+    .calculator-container {
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 
-.lista-dicas li:hover {
-    transform: translateX(8px);
-    border-color: #00e676;
-    box-shadow: 0px 0px 15px #00e67633;
-}
+    .calculator-header h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        color: var(--cor-principal-verde);
+        margin-bottom: 10px;
+        text-align: center;
+    }
 
-/* ---- Animações ---- */
+    .calculator-header p {
+        font-size: 18px;
+        color: #616161;
+        margin-bottom: 30px;
+        text-align: center;
+    }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+    .calculator-card {
+        background-color: var(--cor-fundo-branco);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px; /* Largura ideal para um formulário */
+        border-top: 5px solid var(--cor-acento-amarelo); /* Linha de destaque */
+    }
 
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(25px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+    /* 4. ESTILIZAÇÃO DO FORMULÁRIO */
 
-/* ======== ESTILO GERAL ======== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+    .input-group {
+        margin-bottom: 25px;
+    }
 
-body {
-  background: linear-gradient(135deg, #0f1f0f, #1b3a1b, #2e4d2e);
-  color: #e8f5e9;
-  overflow-x: hidden;
-  animation: fadeIn 1.2s ease;
-}
+    .input-group label {
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 16px;
+        color: var(--cor-texto-escuro);
+    }
 
-/* ======== NAVBAR ======== */
-.navbar {
-  width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  background: rgba(10, 20, 10, 0.85);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-}
+    .input-group input[type="text"], 
+    .input-group input[type="number"] {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #E0E0E0;
+        border-radius: 10px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+    }
 
-.logo {
-  font-size: 28px;
-  font-weight: 700;
-  color: #8bc34a;
-  letter-spacing: 1px;
-}
+    .input-group input[type="text"]:focus, 
+    .input-group input[type="number"]:focus {
+        border-color: var(--cor-principal-verde);
+        outline: none;
+    }
 
-.navbar ul {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-}
+    .calculate-button {
+        width: 100%;
+        background-color: var(--cor-acento-amarelo);
+        color: var(--cor-texto-escuro);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        padding: 15px;
+        border: none;
+        border-radius: 12px;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0 8px 15px rgba(255, 193, 7, 0.3);
+        transition: background-color 0.3s, transform 0.2s;
+    }
 
-.navbar a {
-  color: #c8e6c9;
-  text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.navbar a:hover {
-  color: #8bc34a;
-  transform: scale(1.07);
-}
-
-/* ======== BALÕES ======== */
-.ballon {
-    display: flex;
-}
-.balloon {
-  max-width: 620px;
-  margin: 25px;
-  background: rgba(40, 70, 40, 0.75);
-  padding: 30px;
-  border-radius: 25px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-  animation: fadeInUp 1s ease;
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(120, 180, 120, 0.2);
-  
-}
-
-.balloon h2 {
-  font-size: 26px;
-  margin-bottom: 15px;
-  color: #a5d6a7;
-}
-
-.balloon p, .balloon ul {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #e8f5e9;
-}
-
-.balloon ul li {
-  margin-bottom: 10px;
-}
-
-/* ======== ANIMAÇÕES ======== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ======== SCROLLBAR PERSONALIZADA ======== */
-/* ::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #1d331d;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #000000;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #66bb6a;
-} */
-
-
+    .calculate-button:hover {
+        background-color: #FFB300; /* Um amarelo um pouco mais escuro */
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(255, 193, 7, 0.4);
+    }
+    
+    /* 5. SEÇÃO DE RESULTADO */
+    .result-box {
+        background-color: var(--cor-principal-verde);
+        color: var(--cor-fundo-branco);
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        margin-top: 30px;
+        display: none; /* Inicie oculto, o JS vai mostrar após o cálculo */
+    }
+    
+    .result-box h3 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    
+    .result-box .value {
+        font-size: 40px;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 10px;
+    }
