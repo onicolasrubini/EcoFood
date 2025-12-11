@@ -65,9 +65,9 @@
       }
 
       /* SEÇÃO PRINCIPAL (HERO) */
-      .body-section {
+      /* .body-section {
         overflow: hidden;
-      }
+      } */
       
       .image-background {
         z-index: -1;
